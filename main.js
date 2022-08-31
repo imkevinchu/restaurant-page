@@ -21,8 +21,8 @@ const createContactPage = () => {
 
 const loadContactPage = () => {
   const main = document.getElementById("main");
-  content.textContent = "";
-  content.appendChild(createContactPage());
+  main.textContent = "";
+  main.appendChild(createContactPage());
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadContactPage);
@@ -107,6 +107,45 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const createNav = () => {
+  const nav = document.createElement("nav");
+  nav.classList.add("nav");
+  nav.setAttribute("id", "nav");
+
+  const homeBtn = document.createElement("button");
+  homeBtn.classList.add("nav-btn");
+  homeBtn.textContent = "Home";
+  homeBtn.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) return;
+    setBtn(homeBtn);
+    (0,_home__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  });
+
+  const menuBtn = document.createElement("button");
+  menuBtn.classList.add("nav-btn");
+  menuBtn.textContent = "Menu";
+  menuBtn.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) return;
+    setBtn(menuBtn);
+    (0,_menu__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  });
+
+  const contactBtn = document.createElement("button");
+  contactBtn.classList.add("nav-btn");
+  contactBtn.textContent = "Contact";
+  contactBtn.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) return;
+    setBtn(contactBtn);
+    (0,_contact__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  });
+
+  nav.appendChild(homeBtn);
+  nav.appendChild(menuBtn);
+  nav.appendChild(contactBtn);
+
+  return nav;
+};
+
 const createMain = () => {
   const main = document.createElement("main");
   main.classList.add("main");
@@ -114,9 +153,21 @@ const createMain = () => {
   return main;
 };
 
+const setBtn = (btn) => {
+  const btnList = document.querySelectorAll(".nav-btn");
+
+  btnList.forEach((btn) => {
+    if (btn !== undefined) {
+      btn.classList.remove("active");
+    }
+  });
+  btn.classList.add("active");
+};
+
 const loadWebsite = () => {
   const content = document.getElementById("content");
 
+  content.appendChild(createNav());
   content.appendChild(createMain());
 
   (0,_home__WEBPACK_IMPORTED_MODULE_0__["default"])();
