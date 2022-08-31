@@ -7,8 +7,8 @@ const createContactPage = () => {
 
 const loadContactPage = () => {
   const main = document.getElementById("main");
-  content.textContent = "";
-  content.appendChild(createContactPage());
+  main.textContent = "";
+  main.appendChild(createContactPage());
 };
 
 export default loadContactPage;
