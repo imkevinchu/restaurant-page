@@ -226,7 +226,7 @@ var loadWebsite = function loadWebsite() {
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "img/e7aa40fd60d2ba2d26de.jpg";
+module.exports = __webpack_require__.p + "assets/e7aa40fd60d2ba2d26de.jpg";
 
 /***/ }),
 
@@ -236,7 +236,7 @@ module.exports = __webpack_require__.p + "img/e7aa40fd60d2ba2d26de.jpg";
   \***************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "img/4304f940dfbee761d56b.jpg";
+module.exports = __webpack_require__.p + "assets/4304f940dfbee761d56b.jpg";
 
 /***/ }),
 
@@ -246,7 +246,7 @@ module.exports = __webpack_require__.p + "img/4304f940dfbee761d56b.jpg";
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "img/d80d70f6cf659a313231.jpg";
+module.exports = __webpack_require__.p + "assets/d80d70f6cf659a313231.jpg";
 
 /***/ }),
 
@@ -256,7 +256,7 @@ module.exports = __webpack_require__.p + "img/d80d70f6cf659a313231.jpg";
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "img/47f0fd353a1d651335d2.jpg";
+module.exports = __webpack_require__.p + "assets/47f0fd353a1d651335d2.jpg";
 
 /***/ })
 
