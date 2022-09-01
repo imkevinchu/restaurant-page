@@ -12,30 +12,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const createContactPage = () => {
-  const contactPage = document.createElement("div");
+var createContactPage = function createContactPage() {
+  var contactPage = document.createElement("div");
   contactPage.classList.add("contact");
-
-  const phone = document.createElement("p");
+  var phone = document.createElement("p");
   phone.textContent = "(310) 867-5309";
-
-  const address = document.createElement("p");
+  var address = document.createElement("p");
   address.textContent = "585 Venice Blvd, Venice, CA 90291";
-
   contactPage.appendChild(phone);
   contactPage.appendChild(address);
-
   return contactPage;
 };
 
-const loadContactPage = () => {
-  const main = document.getElementById("main");
+var loadContactPage = function loadContactPage() {
+  var main = document.getElementById("main");
   main.textContent = "";
   main.appendChild(createContactPage());
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadContactPage);
-
 
 /***/ }),
 
@@ -49,28 +44,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const createHomePage = () => {
-  const homePage = document.createElement("div");
+var createHomePage = function createHomePage() {
+  var homePage = document.createElement("div");
   homePage.classList.add("home");
-
-  const heading = document.createElement("h2");
-  const subtitle = document.createElement("p");
+  var heading = document.createElement("h2");
+  var subtitle = document.createElement("p");
   heading.textContent = "Quality that doesn't go to waste";
   subtitle.textContent = "Since 1989";
   homePage.appendChild(heading);
   homePage.appendChild(subtitle);
-
   return homePage;
 };
 
-const loadHomePage = () => {
-  const main = document.getElementById("main");
+var loadHomePage = function loadHomePage() {
+  var main = document.getElementById("main");
   main.textContent = "";
   main.appendChild(createHomePage());
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadHomePage);
-
 
 /***/ }),
 
@@ -84,51 +76,54 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-// import Hamburger from "./img/hamburger.jpg";
-// import Cheeseburger from "./img/cheeseburger.jpg";
-// import Fries from "./img/fries.jpg";
-// import Milkshake from "./img/milkshake.jpg";
+/* harmony import */ var _img_hamburger_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./img/hamburger.jpg */ "./src/img/hamburger.jpg");
+/* harmony import */ var _img_cheeseburger_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/cheeseburger.jpg */ "./src/img/cheeseburger.jpg");
+/* harmony import */ var _img_fries_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/fries.jpg */ "./src/img/fries.jpg");
+/* harmony import */ var _img_milkshake_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./img/milkshake.jpg */ "./src/img/milkshake.jpg");
 
-const createMenuPage = () => {
-  const menuPage = document.createElement("div");
+
+
+
+
+var createMenuPage = function createMenuPage() {
+  var menuPage = document.createElement("div");
   menuPage.classList.add("menu");
-
-  menuPage.appendChild(createMenuItem("Hamburger", "600"));
-  menuPage.appendChild(createMenuItem("Cheeseburger", "400"));
-  menuPage.appendChild(createMenuItem("Fries", "200"));
-  menuPage.appendChild(createMenuItem("Milkshake", "500"));
-
+  var Hamburger = new Image();
+  var Cheeseburger = new Image();
+  var Fries = new Image();
+  var Milkshake = new Image();
+  Hamburger.src = _img_hamburger_jpg__WEBPACK_IMPORTED_MODULE_0__;
+  Cheeseburger.src = _img_cheeseburger_jpg__WEBPACK_IMPORTED_MODULE_1__;
+  Fries.src = _img_fries_jpg__WEBPACK_IMPORTED_MODULE_2__;
+  Milkshake.src = _img_milkshake_jpg__WEBPACK_IMPORTED_MODULE_3__;
+  menuPage.appendChild(createMenuItem(Hamburger, "Hamburger", "600"));
+  menuPage.appendChild(createMenuItem(Cheeseburger, "Cheeseburger", "400"));
+  menuPage.appendChild(createMenuItem(Fries, "Fries", "200"));
+  menuPage.appendChild(createMenuItem(Milkshake, "Milkshake", "500"));
   return menuPage;
 };
 
-const createMenuItem = (name, cal) => {
-  const menuItem = document.createElement("div");
+var createMenuItem = function createMenuItem(img, name, cal) {
+  var menuItem = document.createElement("div");
   menuItem.classList.add("menu-item");
-
-  const title = document.createElement("h3");
-  const calories = document.createElement("p");
+  var title = document.createElement("h3");
+  var calories = document.createElement("p");
   title.textContent = name;
-  calories.textContent = cal;
-
-  //   const img = document.createElement("img");
-  //   img.src = `${name.toUpperCase()}`;
-  //   img.alt = `${name}`;
-
+  calories.textContent = "".concat(cal, " calories");
+  img.alt = name;
   menuItem.appendChild(title);
   menuItem.appendChild(calories);
-  //   menuItem.appendChild(img);
-
+  menuItem.appendChild(img);
   return menuItem;
 };
 
-const loadMenuPage = () => {
-  const main = document.getElementById("main");
+var loadMenuPage = function loadMenuPage() {
+  var main = document.getElementById("main");
   main.textContent = "";
   main.appendChild(createMenuPage());
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadMenuPage);
-
 
 /***/ }),
 
@@ -145,93 +140,123 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ "./src/home.js");
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ "./src/menu.js");
 /* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact */ "./src/contact.js");
+var _this = undefined;
 
 
 
 
-const createHeader = () => {
-  const header = document.createElement("header");
+
+var createHeader = function createHeader() {
+  var header = document.createElement("header");
   header.classList.add("header");
   header.setAttribute("id", "header");
-
-  const title = document.createElement("h1");
+  var title = document.createElement("h1");
   title.classList.add("title");
   title.textContent = "Out-N-In Burger";
-
   header.appendChild(title);
   header.appendChild(createNav());
-
   return header;
 };
 
-const createNav = () => {
-  const nav = document.createElement("nav");
+var createNav = function createNav() {
+  var nav = document.createElement("nav");
   nav.classList.add("nav");
   nav.setAttribute("id", "nav");
-
-  const homeBtn = document.createElement("button");
+  var homeBtn = document.createElement("button");
   homeBtn.classList.add("nav-btn");
   homeBtn.textContent = "Home";
-  homeBtn.addEventListener("click", (e) => {
+  homeBtn.addEventListener("click", function (e) {
     if (e.target.classList.contains("active")) return;
     setBtn(homeBtn);
     (0,_home__WEBPACK_IMPORTED_MODULE_0__["default"])();
   });
-
-  const menuBtn = document.createElement("button");
+  var menuBtn = document.createElement("button");
   menuBtn.classList.add("nav-btn");
   menuBtn.textContent = "Menu";
-  menuBtn.addEventListener("click", (e) => {
+  menuBtn.addEventListener("click", function (e) {
     if (e.target.classList.contains("active")) return;
     setBtn(menuBtn);
     (0,_menu__WEBPACK_IMPORTED_MODULE_1__["default"])();
   });
-
-  const contactBtn = document.createElement("button");
+  var contactBtn = document.createElement("button");
   contactBtn.classList.add("nav-btn");
   contactBtn.textContent = "Contact";
-  contactBtn.addEventListener("click", (e) => {
+  contactBtn.addEventListener("click", function (e) {
     if (e.target.classList.contains("active")) return;
     setBtn(contactBtn);
     (0,_contact__WEBPACK_IMPORTED_MODULE_2__["default"])();
   });
-
   nav.appendChild(homeBtn);
   nav.appendChild(menuBtn);
   nav.appendChild(contactBtn);
-
   return nav;
 };
 
-const createMain = () => {
-  const main = document.createElement("main");
+var createMain = function createMain() {
+  var main = document.createElement("main");
   main.classList.add("main");
   main.setAttribute("id", "main");
   return main;
 };
 
-const setBtn = (btn) => {
-  const btnList = document.querySelectorAll(".nav-btn");
-
-  btnList.forEach((btn) => {
-    if (btn !== undefined) {
+var setBtn = function setBtn(btn) {
+  var btnList = document.querySelectorAll(".nav-btn");
+  btnList.forEach(function (btn) {
+    if (btn !== _this) {
       btn.classList.remove("active");
     }
   });
   btn.classList.add("active");
 };
 
-const loadWebsite = () => {
-  const content = document.getElementById("content");
-
+var loadWebsite = function loadWebsite() {
+  var content = document.getElementById("content");
   content.appendChild(createHeader());
   content.appendChild(createMain());
-
   (0,_home__WEBPACK_IMPORTED_MODULE_0__["default"])();
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadWebsite);
 
+/***/ }),
+
+/***/ "./src/img/cheeseburger.jpg":
+/*!**********************************!*\
+  !*** ./src/img/cheeseburger.jpg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "img/e7aa40fd60d2ba2d26de.jpg";
+
+/***/ }),
+
+/***/ "./src/img/fries.jpg":
+/*!***************************!*\
+  !*** ./src/img/fries.jpg ***!
+  \***************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "img/4304f940dfbee761d56b.jpg";
+
+/***/ }),
+
+/***/ "./src/img/hamburger.jpg":
+/*!*******************************!*\
+  !*** ./src/img/hamburger.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "img/d80d70f6cf659a313231.jpg";
+
+/***/ }),
+
+/***/ "./src/img/milkshake.jpg":
+/*!*******************************!*\
+  !*** ./src/img/milkshake.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "img/47f0fd353a1d651335d2.jpg";
 
 /***/ })
 
@@ -274,6 +299,18 @@ const loadWebsite = () => {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -290,6 +327,26 @@ const loadWebsite = () => {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
@@ -300,9 +357,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _website__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./website */ "./src/website.js");
 
-
 (0,_website__WEBPACK_IMPORTED_MODULE_0__["default"])();
-
 })();
 
 /******/ })()

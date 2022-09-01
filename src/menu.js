@@ -1,36 +1,44 @@
-// import Hamburger from "./img/hamburger.jpg";
-// import Cheeseburger from "./img/cheeseburger.jpg";
-// import Fries from "./img/fries.jpg";
-// import Milkshake from "./img/milkshake.jpg";
+import HamburgerImg from "./img/hamburger.jpg";
+import CheeseburgerImg from "./img/cheeseburger.jpg";
+import FriesImg from "./img/fries.jpg";
+import MilkshakeImg from "./img/milkshake.jpg";
 
 const createMenuPage = () => {
   const menuPage = document.createElement("div");
   menuPage.classList.add("menu");
 
-  menuPage.appendChild(createMenuItem("Hamburger", "600"));
-  menuPage.appendChild(createMenuItem("Cheeseburger", "400"));
-  menuPage.appendChild(createMenuItem("Fries", "200"));
-  menuPage.appendChild(createMenuItem("Milkshake", "500"));
+  const Hamburger = new Image();
+  const Cheeseburger = new Image();
+  const Fries = new Image();
+  const Milkshake = new Image();
+
+  Hamburger.src = HamburgerImg;
+  Cheeseburger.src = CheeseburgerImg;
+  Fries.src = FriesImg;
+  Milkshake.src = MilkshakeImg;
+
+  menuPage.appendChild(createMenuItem(Hamburger, "Hamburger", "600"));
+  menuPage.appendChild(createMenuItem(Cheeseburger, "Cheeseburger", "400"));
+  menuPage.appendChild(createMenuItem(Fries, "Fries", "200"));
+  menuPage.appendChild(createMenuItem(Milkshake, "Milkshake", "500"));
 
   return menuPage;
 };
 
-const createMenuItem = (name, cal) => {
+const createMenuItem = (img, name, cal) => {
   const menuItem = document.createElement("div");
   menuItem.classList.add("menu-item");
 
   const title = document.createElement("h3");
   const calories = document.createElement("p");
   title.textContent = name;
-  calories.textContent = cal;
+  calories.textContent = `${cal} calories`;
 
-  //   const img = document.createElement("img");
-  //   img.src = `${name.toUpperCase()}`;
-  //   img.alt = `${name}`;
+  img.alt = name;
 
   menuItem.appendChild(title);
   menuItem.appendChild(calories);
-  //   menuItem.appendChild(img);
+  menuItem.appendChild(img);
 
   return menuItem;
 };
