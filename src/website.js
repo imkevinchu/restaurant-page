@@ -2,6 +2,21 @@ import loadHomePage from "./home";
 import loadMenuPage from "./menu";
 import loadContactPage from "./contact";
 
+const createHeader = () => {
+  const header = document.createElement("header");
+  header.classList.add("header");
+  header.setAttribute("id", "header");
+
+  const title = document.createElement("h1");
+  title.classList.add("title");
+  title.textContent = "Out-N-In Burger";
+
+  header.appendChild(title);
+  header.appendChild(createNav());
+
+  return header;
+};
+
 const createNav = () => {
   const nav = document.createElement("nav");
   nav.classList.add("nav");
@@ -62,7 +77,7 @@ const setBtn = (btn) => {
 const loadWebsite = () => {
   const content = document.getElementById("content");
 
-  content.appendChild(createNav());
+  content.appendChild(createHeader());
   content.appendChild(createMain());
 
   loadHomePage();
