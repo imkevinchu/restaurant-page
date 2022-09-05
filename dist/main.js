@@ -76,10 +76,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _img_hamburger_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./img/hamburger.jpg */ "./src/img/hamburger.jpg");
-/* harmony import */ var _img_cheeseburger_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/cheeseburger.jpg */ "./src/img/cheeseburger.jpg");
-/* harmony import */ var _img_fries_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/fries.jpg */ "./src/img/fries.jpg");
-/* harmony import */ var _img_milkshake_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./img/milkshake.jpg */ "./src/img/milkshake.jpg");
+/* harmony import */ var _img_burger_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./img/burger.png */ "./src/img/burger.png");
+/* harmony import */ var _img_fries_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/fries.png */ "./src/img/fries.png");
+/* harmony import */ var _img_coffee_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/coffee.png */ "./src/img/coffee.png");
+/* harmony import */ var _img_icecream_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./img/icecream.png */ "./src/img/icecream.png");
 
 
 
@@ -88,18 +88,18 @@ __webpack_require__.r(__webpack_exports__);
 var createMenuPage = function createMenuPage() {
   var menuPage = document.createElement("div");
   menuPage.classList.add("menu");
-  var Hamburger = new Image();
-  var Cheeseburger = new Image();
+  var Burger = new Image();
   var Fries = new Image();
-  var Milkshake = new Image();
-  Hamburger.src = _img_hamburger_jpg__WEBPACK_IMPORTED_MODULE_0__;
-  Cheeseburger.src = _img_cheeseburger_jpg__WEBPACK_IMPORTED_MODULE_1__;
-  Fries.src = _img_fries_jpg__WEBPACK_IMPORTED_MODULE_2__;
-  Milkshake.src = _img_milkshake_jpg__WEBPACK_IMPORTED_MODULE_3__;
-  menuPage.appendChild(createMenuItem(Hamburger, "Hamburger", "600"));
-  menuPage.appendChild(createMenuItem(Cheeseburger, "Cheeseburger", "400"));
-  menuPage.appendChild(createMenuItem(Fries, "Fries", "200"));
-  menuPage.appendChild(createMenuItem(Milkshake, "Milkshake", "500"));
+  var Coffee = new Image();
+  var IceCream = new Image();
+  Burger.src = _img_burger_png__WEBPACK_IMPORTED_MODULE_0__;
+  Coffee.src = _img_coffee_png__WEBPACK_IMPORTED_MODULE_2__;
+  Fries.src = _img_fries_png__WEBPACK_IMPORTED_MODULE_1__;
+  IceCream.src = _img_icecream_png__WEBPACK_IMPORTED_MODULE_3__;
+  menuPage.appendChild(createMenuItem(Burger, "Burger", "600"));
+  menuPage.appendChild(createMenuItem(Fries, "Fries", "300"));
+  menuPage.appendChild(createMenuItem(Coffee, "Coffee", "100"));
+  menuPage.appendChild(createMenuItem(IceCream, "Ice Cream", "400"));
   return menuPage;
 };
 
@@ -220,43 +220,43 @@ var loadWebsite = function loadWebsite() {
 
 /***/ }),
 
-/***/ "./src/img/cheeseburger.jpg":
-/*!**********************************!*\
-  !*** ./src/img/cheeseburger.jpg ***!
-  \**********************************/
+/***/ "./src/img/burger.png":
+/*!****************************!*\
+  !*** ./src/img/burger.png ***!
+  \****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "assets/e7aa40fd60d2ba2d26de.jpg";
+module.exports = __webpack_require__.p + "assets/1919583412c9ef5670df.png";
 
 /***/ }),
 
-/***/ "./src/img/fries.jpg":
+/***/ "./src/img/coffee.png":
+/*!****************************!*\
+  !*** ./src/img/coffee.png ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/e2c64556b8cc3a1e2ad4.png";
+
+/***/ }),
+
+/***/ "./src/img/fries.png":
 /*!***************************!*\
-  !*** ./src/img/fries.jpg ***!
+  !*** ./src/img/fries.png ***!
   \***************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "assets/4304f940dfbee761d56b.jpg";
+module.exports = __webpack_require__.p + "assets/6835eff704091ce212a2.png";
 
 /***/ }),
 
-/***/ "./src/img/hamburger.jpg":
-/*!*******************************!*\
-  !*** ./src/img/hamburger.jpg ***!
-  \*******************************/
+/***/ "./src/img/icecream.png":
+/*!******************************!*\
+  !*** ./src/img/icecream.png ***!
+  \******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "assets/d80d70f6cf659a313231.jpg";
-
-/***/ }),
-
-/***/ "./src/img/milkshake.jpg":
-/*!*******************************!*\
-  !*** ./src/img/milkshake.jpg ***!
-  \*******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "assets/47f0fd353a1d651335d2.jpg";
+module.exports = __webpack_require__.p + "assets/43bb0c51368bf7397624.png";
 
 /***/ })
 

@@ -1,26 +1,26 @@
-import HamburgerImg from "./img/hamburger.jpg";
-import CheeseburgerImg from "./img/cheeseburger.jpg";
-import FriesImg from "./img/fries.jpg";
-import MilkshakeImg from "./img/milkshake.jpg";
+import BurgerImg from "./img/burger.png";
+import FriesImg from "./img/fries.png";
+import CoffeeImg from "./img/coffee.png";
+import IceCreamImg from "./img/icecream.png";
 
 const createMenuPage = () => {
   const menuPage = document.createElement("div");
   menuPage.classList.add("menu");
 
-  const Hamburger = new Image();
-  const Cheeseburger = new Image();
+  const Burger = new Image();
   const Fries = new Image();
-  const Milkshake = new Image();
+  const Coffee = new Image();
+  const IceCream = new Image();
 
-  Hamburger.src = HamburgerImg;
-  Cheeseburger.src = CheeseburgerImg;
+  Burger.src = BurgerImg;
+  Coffee.src = CoffeeImg;
   Fries.src = FriesImg;
-  Milkshake.src = MilkshakeImg;
+  IceCream.src = IceCreamImg;
 
-  menuPage.appendChild(createMenuItem(Hamburger, "Hamburger", "600"));
-  menuPage.appendChild(createMenuItem(Cheeseburger, "Cheeseburger", "400"));
-  menuPage.appendChild(createMenuItem(Fries, "Fries", "200"));
-  menuPage.appendChild(createMenuItem(Milkshake, "Milkshake", "500"));
+  menuPage.appendChild(createMenuItem(Burger, "Burger", "600"));
+  menuPage.appendChild(createMenuItem(Fries, "Fries", "300"));
+  menuPage.appendChild(createMenuItem(Coffee, "Coffee", "100"));
+  menuPage.appendChild(createMenuItem(IceCream, "Ice Cream", "400"));
 
   return menuPage;
 };
