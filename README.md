@@ -14,4 +14,4 @@ This is a solution to the [restaurant page project on The Odin Project](https://
 
 ### Preview
 
-![](./screenshots/preview.jpg)
+![](./preview.jpg)
